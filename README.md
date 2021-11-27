@@ -70,24 +70,36 @@ Line yg berisi : $this->db = Database::connect("default"); , berguna untuk menga
 Jika anda memiliki database ke dua maka aktifkan line berikut : $this->akunting = Database::connect("databasekedua");
 
 Contoh :
-Saya mempunyai 2 database pada file .env sebagai berikut:\n
-database.default.hostname = domainkamu\n
-database.default.database = master\n
-database.default.username = postgres\n
-database.default.password = passwordkamu\n
-database.default.DBDriver = Postgre\n
-database.default.port = 5432\n
+Saya mempunyai 2 database pada file .env sebagai berikut:
+
+database.default.hostname = domainkamu
+
+database.default.database = master
+
+database.default.username = postgres
+
+database.default.password = passwordkamu
+
+database.default.DBDriver = Postgre
+
+database.default.port = 5432
 
 database.akunting.hostname = domainkamu
+
 database.akunting.database = accounting
-database.akunting.username = postgres  
-database.akunting.password = passwordkamu  
-database.akunting.DBDriver = Postgre  
+
+database.akunting.username = postgres
+
+database.akunting.password = passwordkamu
+
+database.akunting.DBDriver = Postgre
+
 database.akunting.port = 5432
 
 # dengan demikian saya akan mengaktifkan pada file Core_m.php sebagai berikut:
 
-$this->db = Database::connect("default");\n
+$this->db = Database::connect("default");
+
 $this->akunting = Database::connect("databasekedua");
 
 ==========================================================================
