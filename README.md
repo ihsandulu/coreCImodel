@@ -49,6 +49,7 @@ class Login_m extends Core_m
 Jika file anda berada di dalam folder maka tambahkan 'use App\Models\Core_m;'
 
 Contoh : saya mempunyai file Mcost_m di dalam folder '\app\Models\Master'
+
 Maka saya tambahkan 'use App\Models\Core_m;' sebagai berikut :
 
 ---
@@ -67,9 +68,11 @@ class Mcost_m extends Core_m
 Koneksi Database
 
 Line yg berisi : $this->db = Database::connect("default"); , berguna untuk mengaktifkan database default.
+
 Jika anda memiliki database ke dua maka aktifkan line berikut : $this->akunting = Database::connect("databasekedua");
 
 Contoh :
+
 Saya mempunyai 2 database pada file .env sebagai berikut:
 
 database.default.hostname = domainkamu
