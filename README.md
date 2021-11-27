@@ -13,7 +13,7 @@ File digunakan didalam Model, untuk kebutuhan berikut:
 1. Menangkap request berupa Get dan Post di dalam Model
 2. Membuat query builder di dalam Model
 
-========================================================================================
+==========================================================================
 
 Cara Penggunaan:
 
@@ -24,40 +24,45 @@ Contoh:
 
 Rubah dari :
 
-===============
+---
+
 namespace App\Models;
 
 use CodeIgniter\Model;
 
 class Login_m extends Model
 {
-===============
+
+---
 
 menjadi :
 
-===============
+---
+
 namespace App\Models;
 
 class Login_m extends Core_m
 {
-===============
+
+---
 
 Jika file anda berada di dalam folder maka tambahkan 'use App\Models\Core_m;'
 
 Contoh : saya mempunyai file Mcost_m di dalam folder '\app\Models\Master'
 Maka saya tambahkan 'use App\Models\Core_m;' sebagai berikut :
-===============
+
+---
+
 namespace App\Models\Master;
 
 use App\Models\Core_m;
 
 class Mcost_m extends Core_m
 {
-===============
 
 ---
 
-========================================================================================
+==========================================================================
 
 Koneksi Database
 
@@ -85,6 +90,6 @@ database.akunting.port = 5432
 $this->db = Database::connect("default");
 $this->akunting = Database::connect("databasekedua");
 
-========================================================================================
+==========================================================================
 
 **_Semoga Bermanfaat. Aamiiin_**
