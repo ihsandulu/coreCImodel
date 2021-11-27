@@ -21,8 +21,13 @@ class Core_m extends Model
         }
         $this->session = \Config\Services::session();
         $this->request = \Config\Services::request();
+
+        //Koneksi ke database default
         $this->db = Database::connect("default");
-        $this->akunting = Database::connect("akunting");
+
+        //jika anda mempunyai database ke dua aktifkan line dibawah ini
+        //$this->akunting = Database::connect("databasekedua");
+
         /*if ($this->db) {
 			// check if db exists:
 			if ($this->db->query("SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME='default'")) {
@@ -30,11 +35,11 @@ class Core_m extends Model
 				echo $this->db->getLastQuery();
 				die;
 			} else {
-				echo "waduh";
+				echo "ga konek";
 				die;
 			}
 		} else {
-			echo "Et dah";
+			echo "ada yg ga bener setting db nya";
 			die;
 		}*/
     }
